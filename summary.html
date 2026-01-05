@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Summary</title>
+    <style>
+        body{
+            background: linear-gradient(#FFF3E0, #FFCCBC);
+            font-family: Arial;
+            text-align: center;
+        }
+        .card{
+            background: white;
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        h1{
+            color: #3E2723;
+        }
+        p{
+            font-size: 18px;
+        }
+        button{
+            width: 180px;
+            height: 45px;
+            background-color: #E53935;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #C62828;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Order Summary 🍕</h1>
+
+    <div class="card">
+        <p><b>Pizza Base:</b> Thin Crust</p>
+        <p><b>Sauce:</b> Tomato</p>
+        <p><b>Cheese:</b> Mozzarella</p>
+        <p><b>Veggies:</b> Onion, Capsicum, Olive</p>
+
+        <hr>
+
+        <p><b>Total Price:</b> ₹299</p>
+
+        <br>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <script>
+        function placeOrder(){
+            alert("✅ Order Placed Successfully!");
+            window.location.href = "orderstatus.html";
+        }
+    </script>
+
+</body>
+</html>

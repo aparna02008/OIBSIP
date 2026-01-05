@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(#FFF3E0, #FFCCBC);
+                text-align: center;
+            }
+            table{
+                border: 2px solid black;
+            text-align: center;
+            margin:180px auto;
+            font-size: 40px;
+            padding: 40px;
+            background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+            button{
+            width: 120px; 
+            height: 45px; 
+            background-color: red; 
+            color: white; 
+            border-radius: 10px; 
+            border: none; 
+            font-size: 20px;
+            background-color: #E53935;
+            font-weight: bold;
+    }
+    button:hover{
+    background-color: #C62828;
+    cursor: pointer;
+}
+input{
+            font-size: 40px;
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Registration</h1>
+        <form>
+            <table>
+                <tr><td><label for="name">Name</label></td>
+                <td><input type="text" placeholder="Enter your name" name="name" id="name"></td></tr>
+                <tr><td><label for="email">E-mail</label></td>
+                <td><input type="email" placeholder="Enter your email" name="email" id="email"></td></tr>
+                <tr><td><label for="pass">Password</label></td>
+                <td><input type="password"placeholder="Enter your password" name="pass" id="pass"></td></tr>
+                <tr><td><label for="cpass">Confirm Password</label></td>
+                <td><input type="password"placeholder="Confirm your password" name="cpass" id="cpass"></td></tr>
+                <tr><td><button type="button" onclick="checkregister()">Register</button></td></tr>
+                
+                
+            </table>
+        </form>
+        <script src="task3java.js"></script>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                padding:20px;
+                margin: auto;
+                background: linear-gradient(#FFF3E0, #FFCCBC);
+           text-align: center;
+            }
+            .list{
+                display:flex;
+                justify-content: space-around;
+            }
+            nav{
+            display:flex;
+            justify-content: flex-end;
+            gap:20px;
+            padding: 40px;
+           }
+           button{
+            width: 60px; 
+            height: 20px; 
+            background-color: red; 
+            color: white; 
+            border-radius: 10px; 
+            border: none; 
+            font-size: 10px;
+              background-color: #E53935;
+    font-weight: bold;
+
+           }
+           button:hover{
+  background-color: #B71C1C;
+}
+           .two{
+            width: 180px;
+            height:200px;
+            text-align:center;
+            background-color:white;
+            box-shadow: 2px 2px 2px grey;
+            padding: 40px;
+            position:relative;
+            left: 20px;
+            color:black;
+
+
+           }
+           .three{
+            width: 180px;
+            height:200px;
+            text-align:center;
+            background-color:white;
+            box-shadow: 2px 2px 2px grey;
+            padding: 40px;
+            position:relative;
+            left: 20px;
+            color:black;
+
+           }
+           .four{
+            width: 180px;
+            height:200px;
+            text-align:center;
+            background-color:white;
+            box-shadow: 2px 2px 2px grey;
+            padding: 40px;
+            position:relative;
+            left: 20px;
+            color:black;
+
+           }
+           .five{
+            width: 180px;
+            height:200px;
+            text-align:center;
+            background-color:white;
+            box-shadow: 2px 2px 2px grey;
+            padding: 40px;
+            position:relative;
+            left: 20px;
+            color:black;
+
+           }
+           .six{
+            width: 180px;
+            height:200px;
+            text-align:center;
+            background-color:white;
+            box-shadow: 2px 2px 2px grey;
+            padding: 40px;
+            position:relative;
+            left: 20px;
+            color:black;
+
+           }
+           .two:hover, .three:hover, .four:hover, .five:hover, .six:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+p{
+  color: #2E7D32;
+  font-weight: bold;
+}
+h1{
+  color:#4E342E;
+}
+
+
+        </style>
+        
+
+    </head>
+    <body>
+        <div class="one">
+        <h1>Pizza Dashboard</h1>
+        <h6>Welcome,A! Choose your favorite pizza 🍕</h6>
+        <h6>Choose your favorite pizza and customize it the way you love.</h6></div>
+        <nav>
+            <a href="Home">Home</a>
+            <a href="menu">Menu</a>
+            <a href="order">Order</a>
+            <button type="button">Logout</button>
+        </nav>
+        <div class="list">
+        <div class="two">
+            <h3>Margherita Pizza</h3>
+            <h6>Classic cheese pizza with rich tomato sauce</h6>
+            <p>Price: ₹199</p>
+            <button onclick="goToCustomize()">Customize</button>
+        </div>
+        <div class="three">
+            <h3>Farmhouse Pizza</h3>
+            <h6>Loaded with fresh veggies and cheese</h6>
+            <p>Price: ₹249</p>
+            <button onclick="goToCustomize()">Customize</button>
+        </div>
+        <div class="four">
+            <h3>Veg Supreme</h3>
+            <h6>A perfect mix of vegetables and spices</h6>
+            <p>Price: ₹279</p>
+            <button onclick="goToCustomize()">Customize</button>
+        </div><div class="five">
+            <h3>Paneer Tikka Pizza</h3>
+            <h6>Spicy paneer with Indian flavors</h6>
+            <p>Price: ₹299</p>
+            <button onclick="goToCustomize()">Customize</button>
+        </div><div class="six">
+            <h3>Cheese Burst Pizza</h3>
+            <h6>Extra cheesy delight for cheese lovers</h6>
+            <p>Price: ₹329</p>
+            <button onclick="goToCustomize()">Customize</button>
+        </div>
+        </div>
+        <div class="seven">
+            <h6>Your Orders<br>
+Order #101 – In Kitchen<br>
+Order #102 – Out for Delivery
+</h6>
+        </div>
+        <footer>
+            <p>© 2026 Pizza App | Made with ❤️ by A</p>
+        </footer>
+        <script>
+function goToCustomize() {
+    window.location.href = "customizetask3.html";
+}
+</script>
+    </body>
+</html>
