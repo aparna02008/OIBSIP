@@ -1,85 +1,117 @@
 <html>
 <head>
     <style>
-        nav{
-            display:flex;
-            justify-content: flex-end;
-            gap:20px;
-        }
-        table{
-            border: 2px solid black;
-            text-align: center;
-            margin:180px auto;
-            font-size: 40px;
-            padding: 40px;
-            background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        input{
-            font-size: 40px;
-            padding: 20px;
-        }
         body{
-           background: linear-gradient(#FFF3E0, #FFCCBC);
-           text-align: center;
+            background: linear-gradient(#E3F2FD, #FFFFFF);
+            color: #0D47A1;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        button{
-            width: 120px; 
-            height: 45px; 
-            background-color: red; 
-            color: white; 
-            border-radius: 10px; 
-            border: none; 
-            font-size: 20px;
-              background-color: #E53935;
-    font-weight: bold;
-    }
-    button:hover{
-    background-color: #C62828;
-    cursor: pointer;
-}
 
+        .card{
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        table{
+            margin: auto;
+            border-spacing: 15px;
+        }
+
+        input[type="number"]{
+            padding: 6px;
+            width: 150px;
+        }
+
+        button{
+            background-color: #1976D2;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover{
+            background-color: #0D47A1;
+        }
+
+        #result{
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Pizza</h1>
-    <p>Login to order your favorite pizza 🍕</p>
 
+    <div class="card">
+        <h2>Temperature Converter 🌡️</h2>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Help</a>
-    </nav>
-
-    
-    <form>
         <table>
             <tr>
-                <td><label for="mail">E-mail</label></td>
-                <td><input type="email" placeholder="Enter your email" id="mail"></td>
+                <td>Enter Temperature</td>
+                <td><input type="number" id="temp"></td>
             </tr>
 
             <tr>
-                <td><label for="pass">Password</label></td>
-                <td><input type="password" placeholder="Enter your password" id="pass"></td>
+                <td>Unit</td>
+                <td>
+                    <input type="radio" name="unit" id="celsius">
+                    <label for="celsius">Celsius</label>
+
+                    <input type="radio" name="unit" id="fahrenheit">
+                    <label for="fahrenheit">Fahrenheit</label>
+                </td>
             </tr>
 
             <tr>
-                <td>
-                    <button type="button">Login</button>
+                <td colspan="2">
+                    <button onclick="convert()">Convert</button>
                 </td>
-                <td>
-                    <a href="task3register.html">Register</a>
-                </td>
-                <td><a href="#">Forgot Password</a></td>
             </tr>
         </table>
-    </form>
-   
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convert(){
+            let temp = document.getElementById("temp").value;
+            let isCelsius = document.getElementById("celsius").checked;
+            let isFahrenheit = document.getElementById("fahrenheit").checked;
+            let result = document.getElementById("result");
+
+            if(temp === ""){
+                alert("Please enter the temperature");
+                return;
+            }
+
+            if(!isCelsius && !isFahrenheit){
+                alert("Please select a unit");
+                return;
+            }
+
+            if(isCelsius){
+                let f = (temp * 9/5) + 32;
+                result.innerHTML = `Converted Temperature: ${f.toFixed(2)} °F`;
+            } else {
+                let c = (temp - 32) * 5/9;
+                result.innerHTML = `Converted Temperature: ${c.toFixed(2)} °C`;
+            }
+        }
+    </script>
 
 </body>
 </html>
+
+
+
