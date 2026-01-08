@@ -1,117 +1,59 @@
 <html>
 <head>
-    <style>
-        body{
-            background: linear-gradient(#E3F2FD, #FFFFFF);
-            color: #0D47A1;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card{
-            background: white;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        table{
-            margin: auto;
-            border-spacing: 15px;
-        }
-
-        input[type="number"]{
-            padding: 6px;
-            width: 150px;
-        }
-
-        button{
-            background-color: #1976D2;
-            color: white;
-            padding: 8px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        button:hover{
-            background-color: #0D47A1;
-        }
-
-        #result{
-            margin-top: 15px;
-            font-weight: bold;
-            color: #2E7D32;
-        }
-    </style>
+    <title>Temperature Converter</title>
 </head>
 
-<body>
+<body style="text-align:center; font-family:Arial;">
 
-    <div class="card">
-        <h2>Temperature Converter 🌡️</h2>
+    <h2>Temperature Converter</h2>
 
-        <table>
-            <tr>
-                <td>Enter Temperature</td>
-                <td><input type="number" id="temp"></td>
-            </tr>
+    <p>
+        Enter Temperature:
+        <input type="number" id="temp">
+    </p>
 
-            <tr>
-                <td>Unit</td>
-                <td>
-                    <input type="radio" name="unit" id="celsius">
-                    <label for="celsius">Celsius</label>
+    <p>
+        <input type="radio" name="unit" id="celsius">
+        <label>Celsius</label>
 
-                    <input type="radio" name="unit" id="fahrenheit">
-                    <label for="fahrenheit">Fahrenheit</label>
-                </td>
-            </tr>
+        <input type="radio" name="unit" id="fahrenheit">
+        <label>Fahrenheit</label>
+    </p>
 
-            <tr>
-                <td colspan="2">
-                    <button onclick="convert()">Convert</button>
-                </td>
-            </tr>
-        </table>
+    <button onclick="convert()">Convert</button>
 
-        <p id="result"></p>
-    </div>
+    <p id="result"></p>
 
     <script>
         function convert(){
             let temp = document.getElementById("temp").value;
-            let isCelsius = document.getElementById("celsius").checked;
-            let isFahrenheit = document.getElementById("fahrenheit").checked;
-            let result = document.getElementById("result");
+            let c = document.getElementById("celsius").checked;
+            let f = document.getElementById("fahrenheit").checked;
 
-            if(temp === ""){
-                alert("Please enter the temperature");
+            if(temp == ""){
+                alert("Enter temperature");
                 return;
             }
 
-            if(!isCelsius && !isFahrenheit){
-                alert("Please select a unit");
-                return;
+            if(c){
+                let res = (temp * 9/5) + 32;
+                document.getElementById("result").innerHTML =
+                "Result: " + res + " °F";
             }
-
-            if(isCelsius){
-                let f = (temp * 9/5) + 32;
-                result.innerHTML = `Converted Temperature: ${f.toFixed(2)} °F`;
-            } else {
-                let c = (temp - 32) * 5/9;
-                result.innerHTML = `Converted Temperature: ${c.toFixed(2)} °C`;
+            else if(f){
+                let res = (temp - 32) * 5/9;
+                document.getElementById("result").innerHTML =
+                "Result: " + res + " °C";
+            }
+            else{
+                alert("Select unit");
             }
         }
     </script>
 
 </body>
 </html>
+
 
 
 

@@ -1,204 +1,196 @@
+<!DOCTYPE html>
 <html>
-   <head>
-    <style>
-        body{
-            padding: 20px;
-            border: 2px solid black;
-            box-shadow: 5px 5px 5px grey;
-            font-family: Arial, sans-serif;
-           background: linear-gradient( #f5f5f5,#1e3c72);
-color: #1a1a1a;
-
-
-        }
-        img{
-            width:100px;
-            height:100px;
-        }
-        .two{
-            text-align: center;
-            
-        }
-        .three{
-            display: flex;
-            justify-content: space-around;
-            
-        }
-        .four{
-            
-            display: flex;
-             justify-content: center;
-    gap: 40px;
-            
-        }
-        
-
-        
-        #a{
-            width: 200px;
-            height: 300px;
-            text-align:center;
-            background-color:black;
-            box-shadow: 2px 2px 2px grey;
-            padding: 40px;
-            position:relative;
-            left: 20px;
-            color:whitesmoke
-        }
-        #b{
-            width: 200px;
-            height: 300px;
-            text-align:center;
-            background-color:black;
-            box-shadow: 2px 2px 2px gray;
-            padding: 40px;
-            margin: 20px;
-            position:relative;
-            left: 20px;
-            color:whitesmoke
-        }
-        #c{
-            width: 200px;
-            height: 300px;
-            text-align:center;
-            background-color:black;
-            box-shadow: 2px 2px 2px gray;
-            padding: 40px;
-            margin: 20px;
-            position:relative;
-            left: 20px;
-            color:whitesmoke
-            }
-        #d{
-            width: 200px;
-            height: 300px;
-            text-align:center;
-            background-color:black;
-            box-shadow: 2px 2px 2px grey;
-            padding: 40px;
-            margin: 20px;
-            position:relative;
-            left: 20px;
-            color:whitesmoke
-        }
-        button{
-        width: 100px; 
-        height: 40px; 
-        background-color:rgb(21, 122, 244); 
-        color:white; 
-        border-radius: 10px 10px 10px 10px; 
-        border: none; 
-        
-        
-        }
-        button:hover {
-  background-color: #0b5ed7;
+<head>
+<style>
+body{
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px grey;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#f5f5f5,#1e3c72);
+    color: #1a1a1a;
 }
-         nav{ 
-        display:flex; 
-        justify-content:flex-end;
-        gap:20px; 
-        } 
-        a{
-            color:black
-        }
-        #a:hover, #b:hover, #c:hover, #d:hover ,button{
-  transform: scale(1.05);
-  transition: 0.3s;
+
+
+nav{ 
+    display:flex; 
+    justify-content:flex-end;
+    gap:20px; 
 }
-nav{
-    transform: scaleX(1);
+nav a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+
+img{
+    width:100px;
+    height:100px;
+}
+
+button{
+    width: 140px; 
+    height: 45px; 
+    background-color:rgb(21, 122, 244); 
+    color:white; 
+    border-radius: 10px; 
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0b5ed7;
+    transform: scale(1.05);
     transition: 0.3s;
 }
-@media screen and (max-width: 800px){
-  .three{
-    flex-direction: column;
-    align-items: center;
-  }
+
+
+.two{
+    text-align: center;
+}
+
+.three{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#a,#b,#c,#d{
+    width: 200px;
+    height: 300px;
+    text-align:center;
+    background-color:black;
+    box-shadow: 2px 2px 10px grey;
+    padding: 30px;
+    color:whitesmoke;
+    border-radius: 15px;
+}
+
+#a:hover,#b:hover,#c:hover,#d:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 
-    </style>
-   </head> 
-   <body>
-    <nav> 
-                <a href="home">Home</a> 
-                <a href="Skills">Skills</a> 
-                <a href="Project">Project</a> 
-                <a href="Contact">Contact</a> 
-    </nav> 
-    <div class="one">
-        <img class="img" src="download.jpg">
-        <p>Aparna A</p>
-        <p>“Hi, I’m Aparna, a beginner web developer passionate about creating simple and interactive websites. Take a look at my projects and skills below!”</p>
-        <p>📞 Contact: 12345 67890
-</p>
-        <hr>
-        <div class="two">
-            <h3>About Me</h3>
-            <p>Hi, I’m Aparna, a beginner web developer passionate about HTML, CSS, and Python. I enjoy creating interactive web pages and learning new programming skills. Check out my projects and skills below!</p>
-            <h1>Skills</h1>
-        </div>
+.four{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+}
+
+.four ul{
+    background: #ffffffdd;
+    padding: 25px 35px;
+    border-radius: 18px;
+    width: 230px;
+    box-shadow: 3px 3px 12px rgba(0,0,0,0.25);
+    list-style: square;
+}
+
+.four ul h3{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1e3c72;
+}
+
+.four ul li{
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.four ul:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 800px){
+    .three,.four{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav> 
+    <a href="#">Home</a> 
+    <a href="#">Skills</a> 
+    <a href="#">Project</a> 
+    <a href="#">Contact</a> 
+</nav> 
+
+<hr>
+
+<center>
+<img src="download.jpg">
+<h2>Aparna A</h2>
+<p>Hi, I’m Aparna, a beginner web developer passionate about creating simple and interactive websites.</p>
+<p>📞 Contact: 12345 67890</p>
+</center>
+
+<hr>
+
+<div class="two">
+    <h2>About Me</h2>
+    <p>I’m a beginner web developer passionate about HTML, CSS, Python, and learning new technologies.</p>
+    <h2>Skills</h2>
+</div>
+
+<div class="three">
+    <div id="a">
+        <h3>Python</h3>
+        <img src="64745074.jpg">
+        <p>Used for small projects, automation, and problem solving.</p>
     </div>
 
-    <div class="three">
-        
-        <div id="a">
-            <h3>Python</h3>
-            
-            <img src="64745074.jpg">
-            
-            <p>Python is my primary programming language. I use it to build small projects, automate tasks, and solve problems efficiently.”</p>
-        </div>
-        <div id="b">
-            <h3>C++</h3>
-            
-            <img src="1.png">
-            <p>I use C++ for learning core programming concepts like loops, functions, and object-oriented programming</p>
-            
-        </div>
-        <div id="c">
-            <h3>HTML</h3>
-            <img src="download.png"></centre>
-            <p>I use HTML to structure web pages and create interactive content for websites.</p>
-        </div>
-        <div id="d">
-            <h3>CSS</h3>
-        
-            <img src="download-1.png">
-            <p>I use CSS to style web pages, control layouts, and make websites visually appealing.</p>
-        </div>
+    <div id="b">
+        <h3>C++</h3>
+        <img src="1.png">
+        <p>Used to understand core programming concepts.</p>
     </div>
-    <center>
-        <div class="four">
-        
-        <ul type="square">
-            <h3>Languages Known:</h3>
-            <li>Python</li>
-            <li>C++</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
-            
-            </ul>
-        <ul type="square">
-            <h3>Tools</h3>
-            <li>VS Code</li>
-            <li>Canva</li>
-            <li>GitHub
-</li>
-         </ul>
+
+    <div id="c">
+        <h3>HTML</h3>
+        <img src="download.png">
+        <p>Used to structure web pages.</p>
     </div>
-    </center>
-    <hr>
-    <center>
-    <div class="five">
-   <a href="https://drive.google.com/file/d/1AMbTO8QVHN2EsK_xgt2WzxTcGSbr_VtL/view?usp=drive_link" target="_blank">
-    <button>Download Resume</button>
+
+    <div id="d">
+        <h3>CSS</h3>
+        <img src="download-1.png">
+        <p>Used to style and design web pages.</p>
+    </div>
+</div>
+
+<div class="four">
+    <ul>
+        <h3>Languages Known</h3>
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SQL</li>
+    </ul>
+
+    <ul>
+        <h3>Tools</h3>
+        <li>VS Code</li>
+        <li>GitHub</li>
+        <li>Canva</li>
+    </ul>
+</div>
+
+<hr>
+
+<center>
+<a href="https://drive.google.com/file/d/1AMbTO8QVHN2EsK_xgt2WzxTcGSbr_VtL/view" target="_blank">
+<button>Download Resume</button>
 </a>
+</center>
 
-    </div>
-    </center>
-    
-   </body>
+</body>
 </html>
